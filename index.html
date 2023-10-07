@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Latest Vue practice</title>
+    <script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>My Latest Vue Practice: Basics</h1>
+        <div class="container" v-if="showData">
+             <!--Attribute Binding-->
+            <p>(Attribute Binding)</p> 
+            <a :href="url" target="_blank">
+                The Best Website Ever
+                <svg width="1rem" height="1rem" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#000000" fill="none"><path d="M55.4,32V53.58a1.81,1.81,0,0,1-1.82,1.82H10.42A1.81,1.81,0,0,1,8.6,53.58V10.42A1.81,1.81,0,0,1,10.42,8.6H32"/><polyline points="40.32 8.6 55.4 8.6 55.4 24.18"/><line x1="19.32" y1="45.72" x2="54.61" y2="8.91"/></svg>
+            </a>
+            <br>
+            <p>(v-if, v-else, v-on(@click) events)</p>
+            <button @click="isGraduated">
+                <span v-if='graduated'>Change Graduated Status</span>
+                <span v-else>Change Graduated Status Back!</span>
+            </button>
+            <div v-for="student in students">
+                <button @click="student.age++">Increase {{ student.name }}'s' Age</button>
+                <button @click="student.age--">Decrease {{ student.name }}'s' Age</button>
+            </div>
+            <p>((v-for) - Outputting lists )</p>
+            <ul>
+                <li v-for="student in students"> <!--using v-for to map through array data-->
+                    <h2>Student #{{ student.studentId }} - {{ student.name }} - Age: {{ student.age }}</h2>
+                    <p>Current School: {{ student.currentSchool }}</p>
+                    <span v-if="graduated">Congratulations, You Made It!</span>
+                    <span v-else>Almost There, Keep Going!!!</span>
+                </li>
+
+                <li v-for="book in books">
+                    <h3>{{ book.title }}</h3>
+                    <img :src="book.img" :alt="book.title" id="bookImg">
+                    <h4>{{ book.author }}</h4>
+                </li>
+            </ul>
+            <!-- Mouseover Events -->
+            <h2 style="text-align: center;" >Mouseover Events<br>(Open the console to view logs)</h2>
+            <div class="box" @mouseover="handleEvent($event, 5)">Mouseover (enter)</div>
+            <div class="box" @mouseleave="handleEvent">Mouseleave (exit)</div>
+            <div class="box" @dblclick="handleEvent">Double Click</div>
+            <div class="box" @mousemove="handleMouseMove">Position - {{ x }} {{ y }}</div>
+
+        </div>
+        <div class="btns">
+            <button @click="toggleShowData">
+                <span v-if="showData">Less Is More</span>
+                <span v-else>Show More Please</span>
+            </button>
+        </div>
+
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

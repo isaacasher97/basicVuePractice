@@ -1,0 +1,32 @@
+.box {
+    padding: 100px 0;
+    text-align: center;
+    background: #ddd;
+    width: 400px;
+    margin: 20px auto;
+}
+
+#bookImg {
+    width: 200px;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #121212;
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: cursive;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
