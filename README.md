@@ -1,7 +1,7 @@
 # My Latest Vue Practice: Basics
 
 - **Contributors:** Isaac Asher
-- [**Deployed Site**]()
+- [**Deployed Site**](https://basic-vue-practice.vercel.app/https://basic-vue-practice.vercel.app/)
 
 ## 🧑‍💻 Technologies 🧑‍💻
 
