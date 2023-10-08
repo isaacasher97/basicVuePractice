@@ -12,9 +12,9 @@ const app = Vue.createApp({
             ],
             graduated: true,
             books: [
-                { title: 'Harry Potter 1', author: 'J.K.Rowling', img: './assets/hp1.jpg' },
-                { title: 'Harry Potter 2', author: 'J.K.Rowling', img: './assets/hp2.jpg' },
-                { title: 'Harry Potter 3', author: 'J.K.Rowling', img: './assets/hp3.jpg' }
+                { title: 'Harry Potter 1', author: 'J.K.Rowling', img: './assets/hp1.jpg', isFav: true },
+                { title: 'Harry Potter 2', author: 'J.K.Rowling', img: './assets/hp2.jpg', isFav: false },
+                { title: 'Harry Potter 3', author: 'J.K.Rowling', img: './assets/hp3.jpg', isFav: true }
             ]
         }
     },

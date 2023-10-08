@@ -37,7 +37,8 @@
                     <span v-else>Almost There, Keep Going!!!</span>
                 </li>
 
-                <li v-for="book in books">
+                <!-- Dynamic Classes binding a fav class to the isFav boolean in the books array -->
+                <li v-for="book in books" :class="{ fav: book.isFav }">
                     <h3>{{ book.title }}</h3>
                     <img :src="book.img" :alt="book.title" id="bookImg">
                     <h4>{{ book.author }}</h4>
